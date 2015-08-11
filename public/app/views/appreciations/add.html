@@ -1,0 +1,30 @@
+<div class="content">
+	<form ng-submit="appreciation_add()" >
+		<div class="content-inner" style="margin-top: 100px;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-heading">
+							<a class="modal-close" data-dismiss="modal">&times;</a>
+							<h2 class="modal-title">{{Member.name}} Appreciation </h2>
+					</div>
+					<div class="modal-inner">
+						<div class="form-group form-group-label">
+							<div class="row">
+								<div class="col-md-12">
+									<label class="floating-label" for="float-textarea">Type your Appreciation note here</label>
+									<textarea class="form-control" id="float-textarea" rows="5" ng-model="Appreciation.appreciation"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<p class="text-right">
+							<a class="btn btn-blue btn-flat btn-alt" href="#/member/view/1"  type="button">Close</a>
+							<input type="submit" class="btn btn-blue btn-flat btn-alt"   type="button" value="OK">
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

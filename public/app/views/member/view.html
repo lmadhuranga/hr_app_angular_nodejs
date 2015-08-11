@@ -1,0 +1,63 @@
+<div class="content">
+	<div class="content-heading">
+		<div class="container">
+			<h1 class="heading"></h1>
+		</div>
+	</div>
+	<div class="content-inner">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-main">
+						<div class="card-header">
+							<div class="card-inner-side pull-left">
+								<div class="avatar avatar-sm">
+									<img alt="John Smith Avatar" src="build/images/users/avatar-001.jpg">
+								</div>
+							</div>
+							<div class="card-inner"> 
+								<span>{{Member.first_name}} {{Member.last_name}}</span>
+							</div>
+						</div>
+						
+						<div class="card-img">
+							<img alt="alt text" src="build/images/samples/landscape.jpg">
+						</div>
+						<div class="fbtn-container">
+							<div class="fbtn-inner">
+								<a class="fbtn fbtn-red fbtn-lg" data-toggle="dropdown" aria-expanded="false" href="#/appreciation/add/{{Member.member_id}}/">
+									<!-- <span class="fbtn-text">Links</span> -->
+									<span class="fbtn-ori icon">add</span>
+									<span class="fbtn-sub icon">close</span>
+								</a>
+							</div>	
+						</div>
+
+						<div class="card-inner" style="text-align: center">
+							<span class="fa fa-thumbs-o-up" style="font-size: 20px"> {{Member.appreciations_count}} &nbsp;Appreciations</span>
+						</div>
+						<div ng-repeat="Member in AppreciationsByUser">
+							<div class="appreciation_container col-lg-4 col-sm-6"  ng-repeat="Appreciation in Member.appreciations">
+								<div class="card">
+									<aside class="card-side pull-right">
+										<a class="" href="#/appreciation/delete/{{Appreciation.appreciated_to}}/{{Appreciation.id}}">
+											<span class="card-heading icon" title="Delte">X</span>	
+										</a>
+										
+									</aside>
+									<div class="card-main">
+										<div class="card-inner">
+											<a class="card-heading" href="#/member/view/{{Appreciation.appreciated_by}}">{{Member.appreciation_member_details.first_name}} {{Member.appreciation_member_details.last_name}}</a>
+											<p> {{Appreciation.appreciation}} </p> 
+											<small> {{Appreciation.created}} </small>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

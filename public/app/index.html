@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<base href="/app/">
+	<title>HRApp</title>
+
+
+<!--link(rel='stylesheet', href='/mdl/material.css')-->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en"> -->
+<link href="build/css/base.min.css" rel="stylesheet">
+<link href="build/css/base.css" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+<script src="js/angular.min.js"></script>
+<script src="js/angular-resource.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-cookies.min.js"></script>
+<script src="angular/app.js"></script>
+<script src="angular/controllers.js"></script>
+<script src="angular/services.js"></script>
+</head>
+<body class="avoid-fout page-blue">
+	<div class="avoid-fout-indicator avoid-fout-indicator-fixed">
+		<div class="progress-circular progress-circular-alt progress-circular-center">
+			<div class="progress-circular-wrapper">
+				<div class="progress-circular-inner">
+					<div class="progress-circular-left">
+						<div class="progress-circular-spinner"></div>
+					</div>
+					<div class="progress-circular-gap"></div>
+					<div class="progress-circular-right">
+						<div class="progress-circular-spinner"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo" href="index.html">HRApp</a>
+		<ul class="nav nav-list pull-right">
+			<li>
+				<a data-toggle="menu" href="#profile">
+					<span class="">{{Menu_nav.first_name}}</span>
+					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="build/images/users/avatar-001.jpg"></span>
+				</a>
+			</li>
+		</ul>
+	</header>
+	<div ng-app="HRApp">
+      		<div ng-view></div>
+	</div> 
+	<footer class="footer">
+		<div class="container">
+			<p>HRApp</p>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="build/js/base.min.js"></script>
+</body>
+
+</html>

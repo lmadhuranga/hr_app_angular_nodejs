@@ -1,0 +1,59 @@
+<div class="content">
+	<div class="content-heading">
+		<div class="container">
+			<h1 class="heading"></h1>
+		</div>
+	</div>
+	<div class="content-inner">
+		<div class="container">
+			<div class="tile-wrap">
+				<h2>Member Appreciation</h2>
+				<div class="tile"  ng-repeat="Member in Members" >
+					<div class="pull-left tile-side">
+						<div class="avatar avatar-blue avatar-sm">
+							<span class="fa fa-user"></span>
+						</div>
+					</div>
+					<div class="tile-action tile-action-show">
+						<ul class="nav nav-list pull-right">
+							<li>
+								<a href="#/appreciation/add/{{Member.member_id}}"><span class="icon">add</span></a>
+							</li>
+							<!--<li>-->
+							<!--	<a href="#/appreciation/delete/{{Member.id}}"><span class="icon">delete</span></a>-->
+							<!--</li>-->
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown"><span class="icon">settings</span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="javascript:void(0)"><span class="icon margin-right-half">loop</span>Lorem Ipsum</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)"><span class="icon margin-right-half">replay</span>Consectetur Adipiscing</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)"><span class="icon margin-right-half">shuffle</span>Sed Ornare</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!--<div class="fbtn-container">-->
+					<!--	<div class="fbtn-inner">-->
+					<!--		<a class="fbtn fbtn-red fbtn-lg" data-toggle="dropdown" aria-expanded="false" href="#/appreciation/add/{{Member.member_id}}/">-->
+					<!--			<span class="fbtn-ori icon">add</span>-->
+					<!--			<span class="fbtn-sub icon">close</span>-->
+					<!--		</a>-->
+					<!--	</div>	-->
+					<!--</div>-->
+					<div class="tile-inner">
+						<a href="#/member/view/{{Member.member_id}}"><span class="text-overflow">{{Member.first_name}} {{Member.last_name}}</span></a>
+					</div>
+					<div class="tile-inner">
+						<a href="#/member/view/{{Member.member_id}}"><span class="fa fa-thumbs-o-up"></span> &nbsp; {{Member.appriciation_count}} &nbsp;Appreciations</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

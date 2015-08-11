@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/json" -X POST -d '{"username":"madhuranga","password":"demodemo"}'  http://172.20.15.55:3000/authorized_users/login/
